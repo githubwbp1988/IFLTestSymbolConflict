@@ -1,0 +1,20 @@
+//
+//  IFLSymbol.debug.xcconfig
+//  IFLTestSymbol
+//
+//  Created by erlich wang on 2022/7/21.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+TTY=/dev/ttys002
+
+VERBOSE_SCRIPT_LOGGING=-v
+
+MACH_PATH=${BUILD_DIR}/${CONFIGURATION}${EFFECTIVE_PLATFORM_NAME}/${PRODUCT_NAME}
+
+// 通过功能查看
+//CMD = nm -pa ${MACH_PATH}
+
+// 通过作用于查看
+CMD = objdump --macho --syms ${MACH_PATH}
