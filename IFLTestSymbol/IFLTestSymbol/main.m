@@ -16,6 +16,8 @@ static void static_func(void) {
 
 void libIFLTestStaticLib_global_func(void);
 
+//void mm_func(void);
+
 int main(int argc, const char * argv[]) {
     global_func();
     static_func();
@@ -28,6 +30,9 @@ int main(int argc, const char * argv[]) {
     
     
     libIFLTestStaticLib_global_func();
+    
+    // OTHER_LDFLAGS = $(inherited) -Xlinker -U -Xlinker _mm_func 骗过链接器ld 告诉链接器这个符号不需要管有没有定义
+//    mm_func();
     
     
     return 0;

@@ -193,7 +193,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "echo EFFECTIVE_PLATFORM_NAME: ${EFFECTIVE_PLATFORM_NAME}\necho PRODUCT_NAME: ${PRODUCT_NAME}\n#echo '\\n\\n******************************\\n' 1> ${TTY}\n#echo BUILD_DIR: ${BUILD_DIR} 1> ${TTY}\n#echo BUILD_ROOT: ${BUILD_ROOT} 1> ${TTY}\n#echo OBJROOT: ${OBJROOT} 1> ${TTY}\n#echo CONFIGURATION: ${CONFIGURATION} 1> ${TTY}\n#echo '执行命令: '${CMD} 1> ${TTY}\n#echo '\\n' 1> ${TTY}\n#${CMD} 1> ${TTY}\n";
+			shellScript = "echo EFFECTIVE_PLATFORM_NAME: ${EFFECTIVE_PLATFORM_NAME}\necho PRODUCT_NAME: ${PRODUCT_NAME}\n#echo '\\n\\n******************************\\n' 1> ${TTY}\n#echo BUILD_DIR: ${BUILD_DIR} 1> ${TTY}\n#echo BUILD_ROOT: ${BUILD_ROOT} 1> ${TTY}\n#echo OBJROOT: ${OBJROOT} 1> ${TTY}\n#echo CONFIGURATION: ${CONFIGURATION} 1> ${TTY}\n#echo '执行命令: '${CMD} 1> ${TTY}\n#echo '\\n' 1> ${TTY}\n${CMD} 1> ${TTY}\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -213,6 +213,7 @@
 /* Begin XCBuildConfiguration section */
 		204F6D9428875B2B0099E6E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 207F4BA5288A848B00A775B0 /* IFLCustomSymbol.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;

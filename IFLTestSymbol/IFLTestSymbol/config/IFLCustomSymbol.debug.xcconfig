@@ -13,6 +13,7 @@
 // Xcode通过调用用于在目标文件中构建源文件的编译器的驱动程序来调用链接器，传递-Xlinker参数将导致编译器驱动程序将它们传递给链接器(而不是试图在驱动程序中计算它们)
 // -S: Do not put debug information (STABS or DWARF) in the output file.脱去调试符号
 // -ObjC 所有与OC相关的代码，不管是类 还是分类 还是OC++ 都会链接到app里去
+//OTHER_LDFLAGS = $(inherited) -Xlinker -U -Xlinker _mm_func   // 骗过链接器
 OTHER_LDFLAGS = $(inherited) -ObjC -Xlinker -S
 
 DEPLOYMENT_POSTPROCESSING = YES
